@@ -1,24 +1,24 @@
-# Webpageshot [![npm version](https://badge.fury.io/js/webpageshot.svg)](https://badge.fury.io/js/webpageshot)
+# Webpagedump [![npm version](https://badge.fury.io/js/webpagedump.svg)](https://badge.fury.io/js/webpagedump)
 
-Command like thingy to take a screenshot of a webpage
+Command like thingy to take dump html of a js rendered page
 
 
 ## Installation
 
 ```
-npm install -g webpageshot
+npm install -g webpagedump
 ```
 
 or even use with `npx` directly without installing
 
 ```
-npx webpageshot -u https://meain.io -O meain.png
+npx webpagedump -u https://meain.io -O meain.html
 ```
 
 ## Usage
 
 ```
-Usage: webpageshot [options]
+Usage: webpagedump [options]
 
 Options:
   -V, --version         output the version number
@@ -30,5 +30,5 @@ Options:
 #### Example
 
 ```
-webpageshot -u https://github.com/meain/webpageshot -O webpageshot.png
+webpagedump -u https://github.com/meain/webpagedump -O webpagedump.html
 ```
