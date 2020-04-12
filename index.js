@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const puppeteer = require("puppeteer");
 const program = require("commander");
+const fs = require('fs')
 
 program
   .version("0.0.1")
@@ -14,8 +15,9 @@ function takeScrot(url, location) {
     .then(browser => {
       browser.newPage().then(page => {
         page.goto(url, {waitUntil: 'networkidle0', timeout: 30000}).then(() => {
-          page.screenshot({ path: location, fullPage: true }).then(() => {
-            browser.close();
+          page.content().then((content) => {
+            fs.writeFileSync(location, content);
+            process.exit(0)  // not sure why it was not exiting
           });
         });
       });

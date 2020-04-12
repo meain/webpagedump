@@ -1,13 +1,13 @@
 {
-  "name": "webpageshot",
+  "name": "webpagedump",
   "version": "1.0.6",
-  "description": "Take a screenshot of a webpage",
+  "description": "Get the content of a js renderd webpage",
   "main": "index.js",
   "scripts": {
     "run": "node index.js"
   },
   "bin": {
-    "webpageshot": "./index.js"
+    "webpagedump": "./index.js"
   },
   "keywords": [
     "screenshot",
