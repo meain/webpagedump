@@ -4,7 +4,8 @@
   "description": "Get the content of a js renderd webpage",
   "main": "index.js",
   "scripts": {
-    "run": "node index.js"
+    "run": "node index.js",
+    "test": "node index.js -u 'https://example.com' -O 'example.html' && cat example.html | grep 'This domain is for use in illustrative examples in documents.'"
   },
   "bin": {
     "webpagedump": "./index.js"
